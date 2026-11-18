@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Hoard">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="theme-color" content="#dfe8c8" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0d1a1f" media="(prefers-color-scheme: dark)">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="format-detection" content="telephone=no">
+  <title>Dragon's Hoard</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="icon-180.png?v=1">
+  <link rel="icon" type="image/png" href="icon-192.png?v=1">
+  <link rel="preload" href="fonts/hoard-pixel.woff" as="font" type="font/woff" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+  <script>try { var t = localStorage.getItem('hoard-theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}</script>
+</head>
+<body>
+  <main id="main" class="main"></main>
+
+  <button id="fab" class="fab" data-a="addTx" aria-label="Record an expense"></button>
+
+  <nav id="tabbar" class="tabbar" aria-label="Main"></nav>
+
+  <div id="sheetWrap" class="sheet-wrap" hidden>
+    <div class="backdrop" data-a="closeSheet"></div>
+    <form id="sheet" class="sheet" onsubmit="return false" autocomplete="off"></form>
+  </div>
+
+  <div id="toast" class="toast" hidden></div>
+  <input id="restoreInput" type="file" accept=".json,application/json" hidden>
+
+  <noscript>This app needs JavaScript.</noscript>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
